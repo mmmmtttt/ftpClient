@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".gui.HomeFragment">
+
+    <RelativeLayout
+        android:id="@+id/settings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="120dp">
+
+        <ImageView
+            android:id="@+id/image_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_android_user_50dp" />
+
+        <TextView
+            android:id="@+id/label_welcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/image_user"
+            android:layout_marginBottom="40dp"
+            android:text="Welcome to FTP Client!"
+            android:textColor="@color/teal_700"
+            android:textSize="20dp" />
+
+
+        <Button
+            android:id="@+id/bt_logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/label_welcome"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="40dp"
+            android:backgroundTint="@color/grey"
+            android:text="QUIT"
+            android:textSize="13dp" />
+
+        <TextView
+            android:id="@+id/label_connect_mode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/spinner_mode"
+            android:text="Connection Mode"
+            android:textColor="@color/teal_700" />
+
+        <Spinner
+            android:id="@+id/spinner_mode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/label_welcome"
+            android:layout_alignLeft="@id/spinner_trans"
+            android:layout_alignRight="@id/spinner_trans"
+            android:layout_marginBottom="20dp"
+            android:layout_toRightOf="@id/label_connect_mode"
+            android:entries="@array/connect_mode" />
+
+        <TextView
+            android:id="@+id/label_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/spinner_type"
+            android:text="Data Type"
+            android:textColor="@color/teal_700" />
+
+        <Spinner
+            android:id="@+id/spinner_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/spinner_mode"
+            android:layout_alignLeft="@id/spinner_trans"
+            android:layout_alignRight="@id/spinner_trans"
+            android:layout_marginBottom="20dp"
+            android:layout_toRightOf="@id/label_type"
+            android:entries="@array/type" />
+
+        <TextView
+            android:id="@+id/label_struc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/spinner_struc"
+            android:text="Structure"
+            android:textColor="@color/teal_700" />
+
+        <Spinner
+            android:id="@+id/spinner_struc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/spinner_type"
+            android:layout_alignLeft="@id/spinner_trans"
+            android:layout_alignRight="@id/spinner_trans"
+            android:layout_marginBottom="20dp"
+            android:layout_toRightOf="@id/label_struc"
+            android:entries="@array/struc" />
+
+        <TextView
+            android:id="@+id/label_trans"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/spinner_trans"
+            android:text="Transmission Mode"
+            android:textColor="@color/teal_700" />
+
+        <Spinner
+            android:id="@+id/spinner_trans"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/spinner_struc"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_toRightOf="@id/label_trans"
+            android:entries="@array/trans_mode" />
+
+        <TextView
+            android:id="@+id/label_optimization"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/spinner_optimize"
+            android:text="Optimization"
+            android:textColor="@color/teal_700" />
+
+        <Spinner
+            android:id="@+id/spinner_optimize"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/spinner_trans"
+            android:layout_alignLeft="@id/spinner_trans"
+            android:layout_alignRight="@id/spinner_trans"
+            android:layout_marginBottom="20dp"
+            android:layout_toRightOf="@id/label_trans"
+            android:entries="@array/optimize" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="40dp"
+        android:layout_marginBottom="60dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/bt_upload"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/label_optimization"
+            android:layout_weight="1.0"
+            android:backgroundTint="@color/teal_700"
+            android:text="Upload"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/bt_download"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/label_optimization"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/bt_upload"
+            android:layout_weight="1.0"
+            android:backgroundTint="@color/teal_700"
+            android:text="Download"
+            android:textColor="@color/white" />
+    </LinearLayout>
+</RelativeLayout>

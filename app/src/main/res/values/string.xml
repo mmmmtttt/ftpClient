@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ftpClient</string>
+    <string-array name="connect_mode">
+        <item>Passive Mode</item>
+        <item>Port Mode</item>
+    </string-array>
+    <string-array name="type">
+        <item>Ascii</item>
+        <item>Binary</item>
+    </string-array>
+    <string-array name="struc">
+        <item>File</item>
+        <item>Record</item>
+        <item>Page</item>
+    </string-array>
+    <string-array name="trans_mode">
+        <item>Stream</item>
+        <item>Block</item>
+        <item>Compressed</item>
+    </string-array>
+    <string-array name="optimize">
+        <item>Single Thread</item>
+        <item>Double Thread</item>
+    </string-array>
+</resources>

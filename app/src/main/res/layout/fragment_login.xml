@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    tools:context=".gui.LoginFragment">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:backgroundTint="@color/teal_700">
+
+        <TextView
+            android:id="@+id/label_serverip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/input_serverip"
+            android:layout_marginRight="20dip"
+            android:layout_marginBottom="9dp"
+            android:gravity="center_vertical"
+            android:text="Server IP:" />
+
+        <EditText
+            android:id="@+id/input_serverip"
+            android:layout_width="255dp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/input_pass"
+            android:layout_toRightOf="@id/label_serverip"
+            android:imeOptions="actionDone"
+            android:inputType="text" />
+
+        <TextView
+            android:id="@+id/label_server_port"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/input_serverip"
+
+            android:layout_alignBottom="@id/input_server_port"
+            android:layout_marginRight="20dip"
+            android:gravity="center_vertical"
+            android:text="Server port:" />
+
+        <EditText
+            android:id="@+id/input_server_port"
+            android:layout_width="255dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/input_serverip"
+            android:layout_alignLeft="@id/input_pass"
+            android:layout_toRightOf="@id/label_server_port"
+            android:imeOptions="actionDone"
+            android:inputType="text" />
+
+        <TextView
+            android:id="@+id/label_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/label_server_port"
+            android:layout_alignBottom="@id/input_username"
+            android:layout_marginRight="20dip"
+            android:layout_marginBottom="9dp"
+            android:gravity="center_vertical"
+            android:text="Username:" />
+
+        <EditText
+            android:id="@+id/input_username"
+            android:layout_width="255dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/label_server_port"
+            android:layout_alignLeft="@id/input_pass"
+            android:layout_toRightOf="@id/label_username"
+            android:imeOptions="actionDone"
+            android:inputType="text" />
+
+        <TextView
+            android:id="@+id/label_pass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/input_username"
+            android:layout_alignBottom="@id/input_pass"
+            android:layout_marginRight="20dip"
+            android:gravity="center_vertical"
+            android:text="Password:" />
+
+        <EditText
+            android:id="@+id/input_pass"
+            android:layout_width="255dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/input_username"
+            android:layout_toRightOf="@id/label_pass"
+            android:imeOptions="actionDone"
+            android:inputType="text" />
+
+        <Button
+            android:id="@+id/bt_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/input_pass"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/teal_700"
+            android:text="Login" />
+
+        <Button
+            android:id="@+id/bt_login_test"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bt_login"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/grey"
+            android:text="直接用test连接" />
+    </RelativeLayout>
+
+</RelativeLayout>
